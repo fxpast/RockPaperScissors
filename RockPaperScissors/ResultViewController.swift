@@ -18,7 +18,8 @@ class ResultViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         
-        
+    let win="You win!"
+    let lose="You lose!"
     let systemWeapon = self.systemWeapon
     let playerWeapon = self.playerWeapon
         
@@ -41,14 +42,14 @@ class ResultViewController: UIViewController {
                     if systemWeapon == 3 {
                         
                         //win!
-                        self.mesResult.text="You win!"
+                        self.mesResult.text=win
                         self.mesResult.textColor=UIColor.greenColor()
                         self.resultImage.image=UIImage(named: "weapon1_weapon3")
                         
                     }
                     else {
                         //lose
-                        self.mesResult.text="You lose!"
+                        self.mesResult.text=lose
                         self.mesResult.textColor=UIColor.redColor()
                         self.resultImage.image=UIImage(named: "weapon2_weapon1")
                     }
@@ -57,13 +58,13 @@ class ResultViewController: UIViewController {
                     if systemWeapon == 1 {
                         
                         //win!
-                        self.mesResult.text="You win!"
+                        self.mesResult.text=win
                         self.mesResult.textColor=UIColor.greenColor()
                         self.resultImage.image=UIImage(named: "weapon2_weapon1")
                     }
                     else {
                         //lose
-                        self.mesResult.text="You lose!"
+                        self.mesResult.text=lose
                         self.mesResult.textColor=UIColor.redColor()
                         self.resultImage.image=UIImage(named: "weapon3_weapon2")
                     }
@@ -73,13 +74,13 @@ class ResultViewController: UIViewController {
                     if systemWeapon == 2 {
                         
                         //win!
-                        self.mesResult.text="You win!"
+                        self.mesResult.text=win
                         self.mesResult.textColor=UIColor.greenColor()
                         self.resultImage.image=UIImage(named: "weapon3_weapon2")
                     }
                     else {
                         //lose
-                        self.mesResult.text="You lose!"
+                        self.mesResult.text=lose
                         self.mesResult.textColor=UIColor.redColor()
                         self.resultImage.image=UIImage(named: "weapon1_weapon3")
                     }
@@ -111,15 +112,7 @@ class ResultViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     @IBAction func PlayAgain(sender: UIButton) {
         self.dismissViewControllerAnimated(true, completion: nil)
